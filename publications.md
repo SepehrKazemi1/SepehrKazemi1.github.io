@@ -1,14 +1,35 @@
----
-layout: page
-title: Publications
-permalink: /publications
----
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Publications</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#0b1020;color:#e7ecff;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+  .wrap{max-width:900px;margin:auto;padding:28px}
+  a{color:#7aa2ff}
+  h1{margin:.2rem 0 1rem;font-size:34px}
+  .item{background:#121a37;border:1px solid #2a3b7c;border-radius:18px;padding:18px;margin:12px 0}
+  nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin-bottom:14px}
+  nav a{padding:8px 12px;border:1px solid #2a3b7c;border-radius:12px;text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/research.html">Research</a>
+      <a href="/cv.html">CV</a>
+    </nav>
+    <h1>Publications</h1>
 
-### Selected Publications
-- 2025 — **Paper Title**. *Your Name*, Coauthor. _Journal/Conference_. [PDF](#) · [DOI](#) · [Code](#)
-- 2024 — **Another Title**. *Your Name*, Coauthor. _Venue_. [PDF](#)
+    <div class="item">
+      <strong>Title goes here</strong><br>
+      <em>Sepehr Kazemi</em>, Coauthors — <span>Journal/Conference, Year</span><br>
+      <a href="#">PDF</a> · <a href="#">DOI</a> · <a href="#">Code</a>
+    </div>
 
-### Theses
-- 2022 — **Your Thesis Title**. *MSc/PhD Thesis*, University.
-
-> Tip: keep this list short and link to a complete list (e.g., Google Scholar).
+    <!-- Add more .item blocks as needed -->
+  </div>
+</body>
+</html>
