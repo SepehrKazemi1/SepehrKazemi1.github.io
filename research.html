@@ -89,17 +89,23 @@
     }
 
     /* --- Boat + waves --- */
-    .wave {
-      position: absolute;
-      left: -50%;
-      width: 200%;
-      height: 70px;
-      background: rgba(255,255,255,.18);
-      bottom: 18%;
-      border-top-left-radius: 90px;
-      border-top-right-radius: 90px;
-      animation: drift 18s linear infinite;
-    }
+     .wave {
+  position: fixed;
+  left: -50%;
+  width: 200%;
+  height: 70px;
+  background: rgba(255,255,255,.18);
+  bottom: 0;                 /* snap to bottom */
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  animation: drift 18s linear infinite;
+}
+.wave.w2 {
+  bottom: -20px;             /* second wave slightly lower */
+  opacity: .6;
+  animation-duration: 24s;
+}
+
     .wave.w2 {
       bottom: 10%;
       opacity: .6;
@@ -109,16 +115,18 @@
       from { transform: translateX(0); }
       to   { transform: translateX(-50%); }
     }
-
     .boat {
-      position: absolute;
-      right: 15%;
-      bottom: 18%;
-      width: 70px;
-      height: 46px;
-      animation: bob 3.6s ease-in-out infinite;
-      z-index: 20;
-    }
+  position: fixed;     /* stick to viewport like on homepage */
+  right: 30px;         /* push tight to right side */
+  bottom: 40px;        /* sit just above the wave */
+  width: 70px;
+  height: 46px;
+  animation: bob 3.6s ease-in-out infinite;
+  z-index: 20;
+}
+
+
+    
     @keyframes bob {
       0%   { transform: translateY(0) rotate(-1deg); }
       50%  { transform: translateY(-5px) rotate(1deg); }
