@@ -13,10 +13,10 @@
       --accent:#7aa2ff; --card:#121a37; --chip:#1b254b; --ring:#2a3b7c;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),var(--bg-2));color:var(--fg)}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),var(--bg-2));color:var(--fg);overflow-x:hidden}
     a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-    .container{max-width:1050px;margin:auto;padding:28px}
-    .nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+    .container{max-width:1050px;margin:auto;padding:28px;position:relative}
+    .nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
     .nav a{padding:10px 14px;background:transparent;border:1px solid var(--ring);border-radius:14px}
     .hero{display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center;margin-top:22px}
     .avatar{width:120px;height:120px;border-radius:50%;background:radial-gradient(40% 45% at 30% 30%, #fff3, transparent), var(--chip);
@@ -29,18 +29,35 @@
     .card{background:var(--card);padding:18px;border-radius:18px;border:1px solid var(--ring);min-height:160px}
     .card h3{margin:0 0 8px;font-size:18px}
     .btn{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:12px;border:1px solid var(--ring);background:#ffffff10}
-    .news h3{margin-top:0}
     footer{margin:24px 0 8px;color:var(--muted);font-size:14px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+    /* --- Water design on the right edge --- */
+    .water-edge{
+      position:fixed; inset:0 0 0 auto; width:32vw; min-width:280px; pointer-events:none;
+      background:
+        radial-gradient(80px 80px at 80% 20%, #ffffff18 0 40px, transparent 41px),
+        radial-gradient(120px 120px at 70% 70%, #ffffff10 0 60px, transparent 61px),
+        repeating-linear-gradient(to bottom, #ffffff14 0 2px, transparent 2px 8px),
+        linear-gradient(180deg, #1a4fb9, #0e2d6e);
+      border-left:1px solid #2a3b7c;
+      /* soft curved edge using CSS mask */
+      -webkit-mask: radial-gradient(140% 100% at 0% 50%, transparent 38%, #000 43%);
+              mask: radial-gradient(140% 100% at 0% 50%, transparent 38%, #000 43%);
+      opacity:.7;
+    }
+    @media (max-width:1000px){ .water-edge{display:none} .grid{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
+  <div class="water-edge" aria-hidden="true"></div>
+
   <div class="container">
     <div class="nav">
-      <a href="/publications">Publications</a>
-      <a href="/research">Research</a>
-      <a href="/teaching">Teaching</a>
-      <a href="/cv">CV</a>
+      <a href="/publications.html">Publications</a>
+      <a href="/research.html">Research</a>
+      <a href="/cv.html">CV</a>
+      <a href="https://www.linkedin.com/in/sepehr-kazemi-013909245/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=0egzFZMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
     </div>
 
     <section class="hero">
@@ -64,33 +81,23 @@
     <section class="grid" aria-label="Highlights">
       <div class="card">
         <h3>Research</h3>
-        <p>Modeling drought and hydroclimatic extremes with statistical and ML methods; focus on SPI/SPEI, SDI, and water-resources resilience.</p>
-        <a class="btn" href="/research">Explore research →</a>
+        <p>PFAS removal via advanced oxidation processes; experimental & literature review focus on BDD electrochemical oxidation, foam fractionation, and persulfate methods.</p>
+        <a class="btn" href="/research.html">Explore research →</a>
       </div>
       <div class="card">
         <h3>Publications</h3>
         <p>Selected papers, theses, and datasets with links to PDFs, DOIs, and code.</p>
-        <a class="btn" href="/publications">Browse publications →</a>
+        <a class="btn" href="/publications.html">Browse publications →</a>
       </div>
       <div class="card">
-        <h3>Teaching</h3>
-        <p>Courses, slides, assignments, and office hours.</p>
-        <a class="btn" href="/teaching">View teaching →</a>
+        <h3>CV</h3>
+        <p>Education, experience, and skills. Download a PDF version.</p>
+        <a class="btn" href="/cv.html">View CV →</a>
       </div>
-    </section>
-
-    <section class="card news" style="margin-top:16px">
-      <h3>News</h3>
-      <ul>
-        {% for post in site.posts limit:3 %}
-          <li><strong>{{ post.date | date: "%Y-%m-%d" }}</strong> — <a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
-      <a class="btn" href="/index.html#news">More news (add files in <code>_posts/</code>)</a>
     </section>
 
     <footer>
-      © {{ "now" | date: "%Y" }} Sepehr Kazemi · Built with GitHub Pages + Jekyll
+      © 2025 Sepehr Kazemi · Built with GitHub Pages
     </footer>
   </div>
 </body>
