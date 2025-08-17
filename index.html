@@ -46,4 +46,85 @@
   .panel{background:var(--panel);padding:18px;border-radius:18px;border:1px solid #ffffff22;min-height:160px;backdrop-filter:saturate(120%) blur(2px)}
   .panel h3{margin:0 0 8px;font-size:18px}
   .btn{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:12px;border:1px solid #ffffff33;background:#ffffff14;color:#fff;text-decoration:none}
-  footer{margin:24px 0 8px
+  footer{margin:24px 0 8px;color:#c3c9ff;font-size:14px}
+
+  @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+  /* Right 10% vertical strip with sea → sky + clouds + animated waves + boat */
+  .right-strip{position:fixed;top:0;right:0;width:10vw;min-width:120px;height:100vh;pointer-events:none;overflow:hidden;z-index:-1}
+  /* sky with clouds on top, sea shades below */
+  .right-strip::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(80px 40px at 70% 8%, #ffffffaa 0 45px, transparent 46px),
+      radial-gradient(120px 60px at 95% 15%, #ffffff88 0 55px, transparent 56px),
+      linear-gradient(to bottom, #bfe0ff 0 28%, #9cc3ff 28% 44%, #5f7fe0 44% 68%, #2b4fb0 68% 82%, #102d76 82% 100%);
+  }
+  /* two moving wave crests near the bottom */
+  .wave{position:absolute;left:-50%;width:200%;height:70px;background:rgba(255,255,255,.18);
+        bottom:18%;border-top-left-radius:90px;border-top-right-radius:90px;animation:drift 18s linear infinite}
+  .wave.w2{bottom:10%;opacity:.6;animation-duration:24s}
+  @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  /* tiny boat */
+  .boat{position:absolute;right:25%;bottom:18%;width:70px;height:46px;animation:bob 3.6s ease-in-out infinite}
+  @keyframes bob{0%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1deg)}100%{transform:translateY(0) rotate(-1deg)}}
+  .boat .hull{position:absolute;left:0;bottom:0;width:100%;height:18px;background:#8b6b4e;border-radius:0 0 10px 10px;border:1px solid #77563a}
+  .boat .mast{position:absolute;left:30px;bottom:18px;width:3px;height:34px;background:#e9e9e9}
+  .boat .sail{position:absolute;left:33px;bottom:18px;width:0;height:0;border-left:0 solid transparent;border-right:32px solid transparent;border-bottom:36px solid #f5f5f5;filter:drop-shadow(0 0 6px #ffffff22)}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="/publications.html">Publications</a>
+      <a href="/research.html">Research</a>
+      <a href="/cv.html">CV</a>
+      <a href="https://www.linkedin.com/in/sepehr-kazemi-013909245/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=0egzFZMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+
+    <section class="hero">
+      <img class="avatar" src="/assets/avatar.jpg" alt="Sepehr Kazemi portrait"
+           onerror="this.style.background='#1b254b'; this.removeAttribute('src');">
+      <div>
+        <h1>Sepehr Kazemi</h1>
+        <p class="subtitle">
+          Master’s Student, Civil Engineering — Environment & Water, Sharif University of Technology ·
+          Tehran, Iran · <a style="color:#fff" href="mailto:Sepehr.ss66@yahoo.com">Sepehr.ss66@yahoo.com</a>
+        </p>
+        <div class="chips">
+          <span class="chip">Hydrology</span><span class="chip">Water Resources</span>
+          <span class="chip">Climate Extremes</span><span class="chip">Drought (SPI/SPEI)</span><span class="chip">Forecasting</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Highlights">
+      <div class="panel">
+        <h3>Research</h3>
+        <p>Ongoing work on drought (SPEI/SPI), arid & semi-arid Iran, and 2035 forecasting under Dr. Sanaz Moghim’s group.</p>
+        <a class="btn" href="/research.html">Explore research →</a>
+      </div>
+      <div class="panel">
+        <h3>Publications</h3>
+        <p>PFAS advanced oxidation review (2023) in Int. J. Environ. Analytical Chemistry (Vol. 104, 2024, Issue 20).</p>
+        <a class="btn" href="/publications.html">Browse publications →</a>
+      </div>
+      <div class="panel">
+        <h3>CV</h3>
+        <p>Education, experience, and skills (PDF).</p>
+        <a class="btn" href="/cv.html">View CV →</a>
+      </div>
+    </section>
+
+    <footer>© 2025 Sepehr Kazemi · Built with GitHub Pages</footer>
+  </div>
+
+  <!-- Right-side animated sea strip -->
+  <div class="right-strip" aria-hidden="true">
+    <div class="wave"></div>
+    <div class="wave w2"></div>
+    <div class="boat"><div class="hull"></div><div class="mast"></div><div class="sail"></div></div>
+  </div>
+</body>
+</html>
