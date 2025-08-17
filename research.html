@@ -13,10 +13,10 @@
       color: #eef1ff;
       background: linear-gradient(
         180deg,
-        #0b1020 0%,   /* dark navy at top */
-        #2a2f75 40%,  /* deep blue */
-        #4a3ca6 70%,  /* violet-blue */
-        #6d4bc3 100%  /* lighter purple at bottom */
+        #0b1020 0%,
+        #2a2f75 40%,
+        #4a3ca6 70%,
+        #6d4bc3 100%
       );
       min-height: 100vh;
       position: relative;
@@ -29,6 +29,27 @@
       padding: 40px 20px;
       position: relative;
       z-index: 10;
+    }
+
+    /* --- Navigation --- */
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+    .nav a {
+      padding: 10px 14px;
+      border: 1px solid #ffffff33;
+      border-radius: 14px;
+      background: rgba(0,0,0,.5);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .nav a:hover {
+      background: rgba(0,0,0,.65);
     }
 
     h1 {
@@ -61,7 +82,6 @@
       object-fit: cover;
     }
 
-    /* make images stack on small screens */
     @media (max-width: 700px) {
       .image-grid {
         grid-template-columns: 1fr;
@@ -137,6 +157,16 @@
 </head>
 <body>
   <div class="container">
+    <!-- Navigation bar -->
+    <div class="nav">
+      <a href="/index.html">Home</a>
+      <a href="/publications.html">Publications</a>
+      <a href="/research.html">Research</a>
+      <a href="/cv.html">CV</a>
+      <a href="https://www.linkedin.com/in/sepehr-kazemi-013909245/" target="_blank">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=0egzFZMAAAAJ&hl=en" target="_blank">Google Scholar</a>
+    </div>
+
     <h1>Ongoing Research</h1>
     <div class="panel">
       <p>
@@ -148,14 +178,14 @@
       </p>
     </div>
 
-    <!-- 🔹 Research figures -->
+    <!-- Research figures -->
     <div class="image-grid">
       <img src="assets/research1.jpg" alt="Research figure 1">
       <img src="assets/research2.jpg" alt="Research figure 2">
     </div>
   </div>
 
-  <!-- 🔹 Boat + Waves -->
+  <!-- Boat + Waves -->
   <div class="wave"></div>
   <div class="wave w2"></div>
   <div class="boat">
