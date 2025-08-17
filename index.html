@@ -53,18 +53,20 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 10%;       /* only right 10% of screen */
+  width: 10%;
   height: 100%;
   overflow: hidden;
   background: linear-gradient(
     to top,
-    #001a3d 0%,     /* dark blue bottom */
-    #0056b3 40%,    /* medium blue */
-    #87ceeb 80%,    /* baby blue */
-    #ffffff 100%    /* sky with clouds */
+    #00204d 0%,   /* deep navy */
+    #0055cc 40%,  /* medium ocean blue */
+    #4da6ff 70%,  /* lighter baby blue */
+    #cce6ff 100%  /* soft sky */
   );
   z-index: -1;
 }
+
+  
 .wave {
   position: absolute;
   left: -50%;   /* still wide so animation looks smooth */
@@ -77,32 +79,37 @@
   animation: drift 18s linear infinite;
 }
 
-.wave.w2 {
-  bottom: 5%;
-  opacity: .6;
-  animation-duration: 24s;
+.wave {
+  position: absolute;
+  left: -50%;
+  width: 200%;
+  height: 70px;
+  background: #ffffff;   /* solid white */
+  bottom: 10%;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  animation: drift 18s linear infinite;
 }
 
-.boat {
-  position: absolute;
-  right: 20%;
-  bottom: 12%;
-  width: 70px;
-  height: 46px;
-  animation: bob 3.6s ease-in-out infinite;
+.wave.w2 {
+  bottom: 5%;
+  opacity: 0.9;   /* slightly softer but still visible */
+  animation-duration: 24s;
 }
-.cloud {
-  position: absolute;
-  top: 5%;
-  right: 10%;
-  width: 80px;
-  height: 40px;
-  background: #fff;
-  border-radius: 40px;
-  box-shadow: 40px 10px 60px #fff, -30px 15px 40px #fff;
-  animation: cloud-move 60s linear infinite;
-  opacity: 0.8;
+.boat .hull {
+  background: #a66a3f;   /* stronger brown */
+  border: 2px solid #774422;
 }
+
+.boat .mast {
+  background: #ffffff;   /* pure white mast */
+}
+
+.boat .sail {
+  border-bottom: 36px solid #ffffff; /* bright sail */
+  filter: drop-shadow(0 0 8px #fff); /* glowing sail */
+}
+
 
 @keyframes cloud-move {
   from { transform: translateX(100%); }
