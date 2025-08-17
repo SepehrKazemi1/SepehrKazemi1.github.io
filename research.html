@@ -1,55 +1,70 @@
-body {
-  margin: 0;
-  font-family: Inter, system-ui, sans-serif;
-  color: #eef1ff;
-  background: linear-gradient(
-    180deg,
-    #0b1020 0%,   /* dark navy at top */
-    #2a2f75 40%,  /* deep blue */
-    #4a3ca6 70%,  /* violet-blue */
-    #6d4bc3 100%  /* lighter purple at bottom */
-  );
-  min-height: 100vh;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ongoing Research — Sepehr Kazemi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: #eef1ff;
+      background: linear-gradient(
+        180deg,
+        #0b1020 0%,   /* dark navy at top */
+        #2a2f75 40%,  /* deep blue */
+        #4a3ca6 70%,  /* violet-blue */
+        #6d4bc3 100%  /* lighter purple at bottom */
+      );
+      min-height: 100vh;
+    }
 
-/* Title */
-h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-align: center;
-}
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-/* Content panel */
-.panel {
-  background: rgba(0,0,0,0.55);
-  border: 1px solid #ffffff22;
-  border-radius: 18px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 900px;
-  line-height: 1.6;
-}
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-/* Image grid */
-.image-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin-top: 30px;
-}
+    .panel {
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid #ffffff22;
+      border-radius: 18px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      line-height: 1.6;
+    }
 
-.image-grid img {
-  width: 100%;
-  border-radius: 14px;
-  border: 2px solid #ffffff33;
-  object-fit: cover;
-}
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      border-radius: 14px;
+      border: 2px solid #ffffff33;
+      object-fit: cover;
+    }
+
+    /* make images stack on small screens */
+    @media (max-width: 700px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
 <body>
   <div class="container">
     <h1>Ongoing Research</h1>
@@ -63,10 +78,11 @@ h1 {
       </p>
     </div>
 
-    <!-- 🔹 Place to upload / show 2 images -->
+    <!-- 🔹 Research figures -->
     <div class="image-grid">
       <img src="assets/research1.jpg" alt="Research figure 1">
       <img src="assets/research2.jpg" alt="Research figure 2">
     </div>
   </div>
 </body>
+</html>
