@@ -2,34 +2,47 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Publications</title>
+<title>Publications — Sepehr Kazemi</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  body{margin:0;background:#0b1020;color:#e7ecff;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+  body{margin:0;background:#0b1020;color:#e9ebff;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
   .wrap{max-width:900px;margin:auto;padding:28px}
-  a{color:#7aa2ff}
+  .nav{display:flex;gap:10px;justify-content:flex-end}
+  .nav a{padding:8px 12px;border:1px solid #8b7bff;border-radius:12px;background:#3b2cc533;color:#d8d4ff;text-decoration:none}
+  .nav a:hover{background:#6f5cff33}
   h1{margin:.2rem 0 1rem;font-size:34px}
-  .item{background:#121a37;border:1px solid #2a3b7c;border-radius:18px;padding:18px;margin:12px 0}
-  nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin-bottom:14px}
-  nav a{padding:8px 12px;border:1px solid #2a3b7c;border-radius:12px;text-decoration:none}
+  .item{background:#121a37;border:1px solid #2a3b7c;border-radius:18px;padding:18px;margin:14px 0}
+  .meta{color:#b8c0ff}
+  .badge{display:inline-block;padding:3px 8px;border-radius:999px;border:1px solid #2a3b7c;background:#1b254b;margin-right:6px;font-size:12px}
+  blockquote{margin:0;padding:14px;border-left:3px solid #2a3b7c;background:#0f1630;border-radius:8px}
 </style>
 </head>
 <body>
   <div class="wrap">
-    <nav>
+    <div class="nav">
       <a href="/index.html">Home</a>
       <a href="/research.html">Research</a>
       <a href="/cv.html">CV</a>
-    </nav>
+    </div>
+
     <h1>Publications</h1>
 
     <div class="item">
-      <strong>Title goes here</strong><br>
-      <em>Sepehr Kazemi</em>, Coauthors — <span>Journal/Conference, Year</span><br>
-      <a href="Per-andpolyfluoroalkylsubstancesdegradationusinghydroxylandsulphate-basedAOPs.pdf">PDF</a> · <a href="https://doi.org/10.1080/03067319.2023.2225412">DOI</a> · <a href="#">Code</a>
-    </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+        <span class="badge">2023</span>
+        <strong>PFAS Removal Using Advanced Oxidation Processes — A Review</strong>
+      </div>
+      <div class="meta">
+        International Journal of Environmental Analytical Chemistry, <em>Volume 104 (2024), Issue 20</em> ·
+        <a href="https://doi.org/10.1080/03067319.2023.2225412" target="_blank" rel="noopener">DOI: 10.1080/03067319.2023.2225412</a>
+      </div>
+      <p style="margin-top:10px"><strong>Contribution:</strong> structured literature review and analysis.</p>
 
-    <!-- Add more .item blocks as needed -->
+      <h3 style="margin:12px 0 6px">Abstract</h3>
+      <blockquote>
+        <p>This review investigated the efficiency and mechanism of per- and polyfluoroalkyl substances (PFASs) removal using advanced oxidation processes. Boron-doped diamond (BDD) electrodes in the electrochemical oxidation process are considered one of the ideal anode materials for the oxidation of PFAS compounds due to their high oxidation power with weak electrode-hydroxyl radical interactions. The degradation of PFAS by the combined process of foam fractionation combined with BDD electrochemical oxidation treatment showed that the overall degradation of long-chain PFAS was 77% against 22% of short-chain PFAS in the leachate water treatment plant. The experimental data revealed that photochemical oxidation is moderately efficient for perfluorooctanoic acid (PFOA) but inadequate for Perfluorooctanesulfonic acid (PFOS) removal. Moreover, photochemical oxidation relies heavily on hydroxyl radical oxidation, which is unsuccessful in PFAS breakdown. The review is expected to improve our current understanding of research about PFAS and hence aid in the selection of suitable advanced oxidation processes for PFAS management. Regarding the persulphate method, it has been shown to be effective in the elimination of PFOA, but not PFOS, since the sulphonate group is substantially less electron-dense than the carboxylic group, making PFOS resilient to oxidation by sulphate free radicals.</p>
+      </blockquote>
+    </div>
   </div>
 </body>
 </html>
