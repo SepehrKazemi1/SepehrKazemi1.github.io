@@ -1,40 +1,72 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Research — Ongoing Work</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{ --panel: rgba(0,0,0,.5); --fg:#eef1ff; }
-  *{box-sizing:border-box}
-  body{
-    margin:0;color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
-    background:linear-gradient(to top,#7a66e3 10%, #0b1c3d 100%); /*purple*/
-  }
-  .wrap{max-width:1050px;margin:auto;padding:28px}
-  .nav{display:flex;gap:10px;justify-content:flex-end}
-  .nav a{padding:8px 12px;border:1px solid #ffffff33;border-radius:12px;background:var(--panel);color:#fff;text-decoration:none}
-  .nav a:hover{background:rgba(0,0,0,.6)}
-  h1{margin:.2rem 0 1rem;font-size:34px}
-  .card{background:var(--panel);border:1px solid #ffffff22;border-radius:18px;padding:18px;margin:14px 0;backdrop-filter:saturate(120%) blur(2px)}
-</style>
-</head>
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: #eef1ff;
+  background: linear-gradient(
+    180deg,
+    #0b1020 0%,   /* dark navy at top */
+    #2a2f75 40%,  /* deep blue */
+    #4a3ca6 70%,  /* violet-blue */
+    #6d4bc3 100%  /* lighter purple at bottom */
+  );
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Title */
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Content panel */
+.panel {
+  background: rgba(0,0,0,0.55);
+  border: 1px solid #ffffff22;
+  border-radius: 18px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  line-height: 1.6;
+}
+
+/* Image grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.image-grid img {
+  width: 100%;
+  border-radius: 14px;
+  border: 2px solid #ffffff33;
+  object-fit: cover;
+}
 <body>
-  <div class="wrap">
-    <div class="nav">
-      <a href="/index.html">Home</a>
-      <a href="/publications.html">Publications</a>
-      <a href="/cv.html">CV</a>
+  <div class="container">
+    <h1>Ongoing Research</h1>
+    <div class="panel">
+      <p>
+        I’m currently working under the supervision of <b>Dr. Sanaz Moghim</b> and her group 
+        on <b>drought analysis</b> in arid and semi-arid regions of Iran using the 
+        <b>SPEI</b> and <b>SPI</b> indices. We are developing 
+        <b>forecasts for 2035</b> and analyzing the 
+        <b>Isfahan drought heatmap</b> in recent years.
+      </p>
     </div>
 
-    <h1>Ongoing Research</h1>
-    <div class="card">
-      <p>
-        I’m currently working <strong>under the supervision of Dr. Sanaz Moghim</strong> and her group on
-        <strong>drought analysis in arid and semi-arid regions of Iran</strong> using the <strong>SPEI</strong> and <strong>SPI</strong> indices.
-        We are developing <strong>forecasts for 2035</strong> and analyzing the <strong>Isfahan drought heatmap</strong> in recent years.
-      </p>
+    <!-- 🔹 Place to upload / show 2 images -->
+    <div class="image-grid">
+      <img src="assets/research1.jpg" alt="Research figure 1">
+      <img src="assets/research2.jpg" alt="Research figure 2">
     </div>
   </div>
 </body>
-</html>
