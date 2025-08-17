@@ -1,4 +1,4 @@
-title: "Your Name"
+title: "Sepehr Kazemi"
 description: "Education & Research"
 theme: minima
 # Navigation (what shows in the top menu)
@@ -8,8 +8,8 @@ header_pages:
   - teaching.md
   - cv.md
 # Optional: add your social links (uncomment and edit)
-# minima:
-#   social_links:
-#     - { platform: github,  user_url: "https://github.com/YOUR-USERNAME" }
-#     - { platform: linkedin, user_url: "https://www.linkedin.com/in/YOUR-LINKEDIN" }
-#     - { platform: scholar,  user_url: "https://scholar.google.com/citations?user=YOUR-ID" }
+ minima:
+   social_links:
+     - { platform: github,  user_url: "https://github.com/SepehrKazemi1" }
+     - { platform: linkedin, user_url: "https://www.linkedin.com/in/sepehr-kazemi-013909245" }
+     - { platform: scholar,  user_url: "https://scholar.google.com/citations?user=0egzFZMAAAAJ&hl=en" }
