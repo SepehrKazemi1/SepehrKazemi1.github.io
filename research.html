@@ -5,14 +5,18 @@
 <title>Research — Ongoing Work</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  body{margin:0;color:#f0f1ff;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
-       background:linear-gradient(to top,#0b1c3d 0%, #6e59d9 100%)}
-  .wrap{max-width:900px;margin:auto;padding:28px}
+  :root{ --panel: rgba(0,0,0,.5); --fg:#eef1ff; }
+  *{box-sizing:border-box}
+  body{
+    margin:0;color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+    background:linear-gradient(to top,#7a66e3 0%, #0b1c3d 100%); /* mild purple (bottom) -> dark blue (top) */
+  }
+  .wrap{max-width:1050px;margin:auto;padding:28px}
   .nav{display:flex;gap:10px;justify-content:flex-end}
-  .nav a{padding:8px 12px;border:1px solid #8b7bff;border-radius:12px;background:#3b2cc533;color:#d8d4ff;text-decoration:none}
-  .nav a:hover{background:#6f5cff33}
+  .nav a{padding:8px 12px;border:1px solid #ffffff33;border-radius:12px;background:var(--panel);color:#fff;text-decoration:none}
+  .nav a:hover{background:rgba(0,0,0,.6)}
   h1{margin:.2rem 0 1rem;font-size:34px}
-  .card{background:#121a37cc;border:1px solid #2a3b7c;border-radius:18px;padding:18px;margin:14px 0}
+  .card{background:var(--panel);border:1px solid #ffffff22;border-radius:18px;padding:18px;margin:14px 0;backdrop-filter:saturate(120%) blur(2px)}
 </style>
 </head>
 <body>
@@ -28,8 +32,7 @@
       <p>
         I’m currently working <strong>under the supervision of Dr. Sanaz Moghim</strong> and her group on
         <strong>drought analysis in arid and semi-arid regions of Iran</strong> using the <strong>SPEI</strong> and <strong>SPI</strong> indices.
-        We are investigating spatial–temporal patterns, developing <strong>forecasts for 2035</strong>, and exploring
-        <strong>heatmap analyses for Isfahan’s recent drought</strong> years.
+        We are developing <strong>forecasts for 2035</strong> and analyzing the <strong>Isfahan drought heatmap</strong> in recent years.
       </p>
     </div>
   </div>
