@@ -1,33 +1,184 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CV — Sepehr Kazemi</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  body{margin:0;background:#0b1020;color:#e9ebff;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
-  .wrap{max-width:900px;margin:auto;padding:28px}
-  .nav{display:flex;gap:10px;justify-content:flex-end}
-  .nav a{padding:8px 12px;border:1px solid #8b7bff;border-radius:12px;background:#3b2cc533;color:#d8d4ff;text-decoration:none}
-  .nav a:hover{background:#6f5cff33}
-  h1{margin:.2rem 0 1rem;font-size:34px}
-  .card{background:#121a37;border:1px solid #2a3b7c;border-radius:18px;padding:18px;margin:18px 0}
-  .btn{display:inline-block;margin-top:6px;padding:8px 12px;border-radius:12px;border:1px solid #2a3b7c;background:#ffffff10;text-decoration:none;color:#e9ebff}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curriculum Vitae — Sepehr Kazemi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: #eef1ff;
+      background: linear-gradient(
+        180deg,
+        #0b1020 0%,
+        #2a2f75 40%,
+        #4a3ca6 70%,
+        #6d4bc3 100%
+      );
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    /* --- Navigation --- */
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+    .nav a {
+      padding: 10px 14px;
+      border: 1px solid #ffffff33;
+      border-radius: 14px;
+      background: rgba(0,0,0,.5);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .nav a:hover {
+      background: rgba(0,0,0,.65);
+    }
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #ffffff33;
+      padding-bottom: 6px;
+    }
+
+    .panel {
+      background: rgba(0,0,0,0.55);
+      border: 1px solid #ffffff22;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    li { margin-bottom: 6px; }
+  </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="container">
+    <!-- Navigation -->
     <div class="nav">
       <a href="/index.html">Home</a>
-      <a href="/research.html">Research</a>
       <a href="/publications.html">Publications</a>
+      <a href="/research.html">Research</a>
+      <a href="/cv.html">CV</a>
+      <a href="https://www.linkedin.com/in/sepehr-kazemi-013909245/" target="_blank">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=0egzFZMAAAAJ&hl=en" target="_blank">Google Scholar</a>
     </div>
 
     <h1>Curriculum Vitae</h1>
-    <div class="card">
-      <a class="btn" href="Sepehr's Resume July 2025.docx" download>⬇️ Download my CV (PDF)</a>
+
+    <!-- Education -->
+    <h2>Education</h2>
+    <div class="panel">
+      <p><b>Sep 2024 – Present</b><br>
+      M.Sc. in Water Resources Management · <i>Sharif University of Technology, Tehran</i></p>
+
+      <p><b>Jan 2022 – Sep 2024</b><br>
+      B.Sc. in Civil & Environmental Engineering · <i>Islamic Azad University, Tehran</i><br>
+      GPA (last 2 years): <b>4.0/4.0</b><br>
+      Overall Average (147 units): <b>17.94/20 ≈ 3.82/4.0</b></p>
+
+      <p><b>Sep 2017 – Jan 2022</b><br>
+      Undergraduate Studies in Civil & Environmental Engineering · <i>Amirkabir University, Tehran</i></p>
+    </div>
+
+    <!-- Courses -->
+    <h2>Notable Courses</h2>
+    <div class="panel">
+      <ul>
+        <li>Hydrology (19/20)</li>
+        <li>Hydraulics (19/20)</li>
+        <li>Hydraulic Pumps (19.5/20)</li>
+        <li>Ecology (19.5/20)</li>
+        <li>Differential Equations (20/20)</li>
+        <li>Calculus I & II (20/20)</li>
+        <li>Computer Programming (20/20)</li>
+        <li>Environmental Engineering (20/20)</li>
+      </ul>
+    </div>
+
+    <!-- Research Interests -->
+    <h2>Research Interests</h2>
+    <div class="panel">
+      Hydrology · Climate Change · Drought · Forecasting
+    </div>
+
+    <!-- Publications -->
+    <h2>Publication</h2>
+    <div class="panel">
+      Working on Zayandehroud basin drought projection by 2035 and examining mitigation methods.
+    </div>
+
+    <!-- Skills -->
+    <h2>Technical Skills</h2>
+    <div class="panel">
+      <b>Software:</b> ArcGIS, SDSM, AutoCAD, ETABS, SAFE, Blender<br>
+      <b>Programming:</b> Python<br>
+      <b>Office Tools:</b> Microsoft Office
+    </div>
+
+    <!-- Languages -->
+    <h2>Languages</h2>
+    <div class="panel">
+      GRE 307 (Q: 157 · V: 146 · W: 4.0/6)<br>
+      English: IELTS 7.5/9 (Mock Exam)
+    </div>
+
+    <!-- Certificates -->
+    <h2>Certificates & Projects</h2>
+    <div class="panel">
+      <ul>
+        <li>Design and Analysis of Concrete Apartment (ACI 318, Seismic Control on ETABS)</li>
+        <li>Design and Analysis of 7-Story Steel Office Building (Seismic Resistant)</li>
+        <li>Winner, National Lightweight Concrete Event (10/2022)</li>
+        <li>Highest Compression Strength: 38 MPa in 1.4 kg (10cm³ sample)</li>
+        <li>Junior Construction Inspector (02/2018)</li>
+      </ul>
+    </div>
+
+    <!-- Work Experience -->
+    <h2>Work Experience</h2>
+    <div class="panel">
+      <p><b>Kazemi Construction Group · Tehran, Iran</b><br>
+      <i>Jan 2022 – Present · Construction Inspection & Management</i></p>
+      <ul>
+        <li>Managed construction progress for two residential apartments (490 m² and 595 m²).</li>
+        <li>Assessed integrity of columns, beams, slabs; ensured concrete quality.</li>
+        <li>Finalized completion certificates for one building in compliance with standards.</li>
+      </ul>
+
+      <p><b>Omran Tarh Bana Consulting Engineers · Tehran, Iran</b><br>
+      <i>Mar 2018 – Jan 2021 · Building Controller (Construction Inspector)</i></p>
+      <ul>
+        <li>Ensured compliance with regulations in excavation, safety, and concrete work.</li>
+        <li>Inspected worker safety protocols and prepared detailed compliance reports.</li>
+      </ul>
     </div>
   </div>
 </body>
 </html>
-
