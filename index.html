@@ -1,171 +1,136 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sepehr Kazemi — Education & Research</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --fg:#eef1ff; --muted:#c3c9ff;
-    --ring:#2a3b7c; --panel: rgba(0,0,0,.5); /* 50% black */
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; color:var(--fg);
-    font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
-  }
-  /* Background photo */
-  body::before{
-    content:""; position:fixed; inset:0;
-    background:#0b1020 url('beautiful-scenery-rock-formations-by-sea-queens-bath-kauai-hawaii-sunset.jpg') center/cover no-repeat;
-    z-index:-2;
-  }
-  /* dark overlay for readability */
-  body::after{
-    content:""; position:fixed; inset:0; background:linear-gradient(180deg,#060914cc,#0a1126cc);
-    z-index:-1;
-  }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sepehr Kazemi — Education & Research</title>
+  <meta name="description" content="Sepehr Kazemi — Hydrology & Climate Extremes (SPI/SPEI, heatwaves, ERA5-Land). Prospective PhD (Fall 2026).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  .container{max-width:1050px;margin:auto;padding:28px;position:relative}
-  /* nav tabs */
-  .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-  .nav a{padding:10px 14px;border:1px solid #ffffff33;border-radius:14px;background:var(--panel);color:#fff;text-decoration:none}
-  .nav a:hover{background:rgba(0,0,0,.6)}
-  /* hero */
-  .hero{display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center;margin-top:22px}
-  .avatar{width:120px;height:120px;border-radius:50%;border:2px solid #ffffff40;object-fit:cover; background:radial-gradient(40% 45% at 30% 30%, #fff2, transparent), #1b254b}
-  h1{margin:0 0 8px 0;font-size:38px}
-  .subtitle{color:var(--muted);line-height:1.6}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
-  .chip{padding:6px 10px;border-radius:999px;background:var(--panel);border:1px solid #ffffff33;font-size:14px}
+  <style>
+    :root{
+      --fg:#eef1ff; --muted:#c3c9ff;
+      --ring:#2a3b7c; --panel: rgba(0,0,0,.5);
+      --border:#ffffff22;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--fg);
+      font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+    }
+    /* Background */
+    body::before{
+      content:""; position:fixed; inset:0;
+      background:#0b1020 url('beautiful-scenery-rock-formations-by-sea-queens-bath-kauai-hawaii-sunset.jpg') center/cover no-repeat;
+      z-index:-2;
+    }
+    body::after{
+      content:""; position:fixed; inset:0;
+      background:linear-gradient(180deg,#060914cc,#0a1126cc);
+      z-index:-1;
+    }
 
-  /* 50% black panels for content */
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
-  .panel{background:var(--panel);padding:18px;border-radius:18px;border:1px solid #ffffff22;min-height:160px;backdrop-filter:saturate(120%) blur(2px)}
-  .panel h3{margin:0 0 8px;font-size:18px}
-  .btn{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:12px;border:1px solid #ffffff33;background:#ffffff14;color:#fff;text-decoration:none}
-  footer{margin:24px 0 8px;color:#c3c9ff;font-size:14px}
+    .container{max-width:1050px;margin:auto;padding:28px;position:relative}
 
-  @media (max-width:900px){.grid{grid-template-columns:1fr}}
-  .right-strip {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 10%;
-  height: 100%;
-  overflow: hidden;
-  background: linear-gradient(
-    to top,
-    #00204d 0%,   /* deep navy */
-    #0055cc 40%,  /* medium ocean blue */
-    #4da6ff 70%,  /* lighter baby blue */
-    #cce6ff 100%  /* soft sky */
-  );
-  z-index: -1;
-}
+    /* Nav */
+    .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .nav a{
+      padding:10px 14px;border:1px solid #ffffff33;border-radius:14px;
+      background:var(--panel);color:#fff;text-decoration:none
+    }
+    .nav a:hover{background:rgba(0,0,0,.6)}
 
-  
-.wave {
-  position: absolute;
-  left: -50%;   /* still wide so animation looks smooth */
-  width: 200%;
-  height: 70px;
-  background: rgba(255, 255, 255, .18);
-  bottom: 10%;
-  border-top-left-radius: 90px;
-  border-top-right-radius: 90px;
-  animation: drift 18s linear infinite;
-}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center;margin-top:22px}
+    .avatar{
+      width:120px;height:120px;border-radius:50%;
+      border:2px solid #ffffff40;object-fit:cover;
+      background:radial-gradient(40% 45% at 30% 30%, #fff2, transparent), #1b254b
+    }
+    h1{margin:0 0 8px 0;font-size:38px}
+    .subtitle{color:var(--muted);line-height:1.6}
+    .subtitle a{color:#fff}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+    .chip{padding:6px 10px;border-radius:999px;background:var(--panel);border:1px solid #ffffff33;font-size:14px}
 
-.wave {
-  position: absolute;
-  left: -50%;
-  width: 200%;
-  height: 70px;
-  background: #ffffff;   /* solid white */
-  bottom: 10%;
-  border-top-left-radius: 90px;
-  border-top-right-radius: 90px;
-  animation: drift 18s linear infinite;
-}
+    /* Content panels */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+    .panel{
+      background:var(--panel);padding:18px;border-radius:18px;border:1px solid var(--border);
+      min-height:160px;backdrop-filter:saturate(120%) blur(2px)
+    }
+    .panel h3{margin:0 0 8px;font-size:18px}
+    .btn{
+      display:inline-block;margin-top:10px;padding:8px 12px;border-radius:12px;
+      border:1px solid #ffffff33;background:#ffffff14;color:#fff;text-decoration:none
+    }
+    .btn:hover{background:#ffffff22}
 
-.wave.w2 {
-  bottom: 5%;
-  opacity: 0.9;   /* slightly softer but still visible */
-  animation-duration: 24s;
-}
-.boat .hull {
-  background: #a66a3f;   /* stronger brown */
-  border: 2px solid #774422;
-}
+    footer{margin:24px 0 8px;color:var(--muted);font-size:14px}
 
-.boat .mast {
-  background: #ffffff;   /* pure white mast */
-}
+    @media (max-width:900px){.grid{grid-template-columns:1fr} .hero{grid-template-columns:80px 1fr}}
 
-.boat .sail {
-  border-bottom: 36px solid #ffffff; /* bright sail */
-  filter: drop-shadow(0 0 8px #fff); /* glowing sail */
-}
+    /* Right-side animated sea strip */
+    .right-strip{
+      position:fixed; top:0; right:0; width:10%; height:100%;
+      overflow:hidden;
+      background:linear-gradient(to top,#00204d 0%,#0055cc 40%,#4da6ff 70%,#cce6ff 100%);
+      z-index:0; /* sits behind content */
+      pointer-events:none;
+    }
 
+    /* Waves */
+    .wave{
+      position:absolute; left:-50%; width:200%; height:70px;
+      background:rgba(255,255,255,.18);
+      bottom:18%; border-top-left-radius:90px; border-top-right-radius:90px;
+      animation:drift 18s linear infinite;
+    }
+    .wave.w2{ bottom:10%; opacity:.6; animation-duration:24s }
+    @keyframes drift{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-@keyframes cloud-move {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-200%); }
-}
-<div class="right-strip" aria-hidden="true">
-  <div class="wave"></div>
-  <div class="wave w2"></div>
-  <div class="boat">
-    <div class="hull"></div>
-    <div class="mast"></div>
-    <div class="sail"></div>
-  </div>
-  <div class="cloud"></div>
-</div>
+    /* Boat */
+    .boat{ position:absolute; right:25%; bottom:18%; width:70px; height:46px; animation:bob 3.6s ease-in-out infinite }
+    @keyframes bob{0%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1deg)}100%{transform:translateY(0) rotate(-1deg)}}
+    .boat .hull{ position:absolute; left:0; bottom:0; width:100%; height:18px; background:#8b6b4e; border-radius:0 0 10px 10px; border:1px solid #77563a }
+    .boat .mast{ position:absolute; left:30px; bottom:18px; width:3px; height:34px; background:#e9e9e9 }
+    .boat .sail{ position:absolute; left:33px; bottom:18px; width:0; height:0; border-left:0 solid transparent; border-right:32px solid transparent; border-bottom:36px solid #f5f5f5; filter:drop-shadow(0 0 6px #ffffff22) }
 
-  
- 
-
-
-
-  /* two moving wave crests near the bottom */
-  .wave{position:absolute;left:-50%;width:200%;height:70px;background:rgba(255,255,255,.18);
-        bottom:18%;border-top-left-radius:90px;border-top-right-radius:90px;animation:drift 18s linear infinite}
-  .wave.w2{bottom:10%;opacity:.6;animation-duration:24s}
-  @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  /* tiny boat */
-  .boat{position:absolute;right:25%;bottom:18%;width:70px;height:46px;animation:bob 3.6s ease-in-out infinite}
-  @keyframes bob{0%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1deg)}100%{transform:translateY(0) rotate(-1deg)}}
-  .boat .hull{position:absolute;left:0;bottom:0;width:100%;height:18px;background:#8b6b4e;border-radius:0 0 10px 10px;border:1px solid #77563a}
-  .boat .mast{position:absolute;left:30px;bottom:18px;width:3px;height:34px;background:#e9e9e9}
-  .boat .sail{position:absolute;left:33px;bottom:18px;width:0;height:0;border-left:0 solid transparent;border-right:32px solid transparent;border-bottom:36px solid #f5f5f5;filter:drop-shadow(0 0 6px #ffffff22)}
-</style>
+    /* Motion preference */
+    @media (prefers-reduced-motion:reduce){
+      .wave,.boat{animation:none !important}
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <div class="nav">
-      <a href="/publications.html">Publications</a>
-      <a href="/research.html">Research</a>
-      <a href="/cv.html">CV</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="publications.html">Publications</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html">CV</a>
       <a href="https://www.linkedin.com/in/sepehr-kazemi-013909245/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://scholar.google.com/citations?user=0egzFZMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-    </div>
+    </nav>
 
     <section class="hero">
-      <img class="avatar" src="ChatGPT Image Aug 17, 2025, 05_03_58 PM.png" alt="Sepehr Kazemi portrait"
+      <img class="avatar" src="ChatGPT Image Aug 17, 2025, 05_03_58 PM.png" alt="Portrait of Sepehr Kazemi"
+           loading="lazy"
            onerror="this.style.background='#1b254b'; this.removeAttribute('src');">
       <div>
         <h1>Sepehr Kazemi</h1>
         <p class="subtitle">
-          Master’s Student, Civil Engineering — Environment & Water, Sharif University of Technology ·
-          Tehran, Iran · <a style="color:#fff" href="mailto:Sepehr.ss66@yahoo.com">Sepehr.ss66@yahoo.com</a>· <a style="color:#fff" href="mailto:sepehr.kazemi78@sharif.edu">sepehr.kazemi78@sharif.edu</a>
+          Master’s Student, Civil Engineering — Environment &amp; Water, Sharif University of Technology · Tehran, Iran ·
+          <a href="mailto:Sepehr.ss66@yahoo.com">Sepehr.ss66@yahoo.com</a> ·
+          <a href="mailto:sepehr.kazemi78@sharif.edu">sepehr.kazemi78@sharif.edu</a>
         </p>
-        <div class="chips">
-          <span class="chip">Hydrology</span><span class="chip">Water Resources</span>
-          <span class="chip">Climate Extremes</span><span class="chip">Drought (SPI/SPEI)</span><span class="chip">Forecasting</span>
+        <div class="chips" aria-label="Keywords">
+          <span class="chip">Hydrology</span>
+          <span class="chip">Water Resources</span>
+          <span class="chip">Climate Extremes</span>
+          <span class="chip">Drought (SPI/SPEI)</span>
+          <span class="chip">Forecasting</span>
         </div>
       </div>
     </section>
@@ -173,29 +138,33 @@
     <section class="grid" aria-label="Highlights">
       <div class="panel">
         <h3>Research</h3>
-        <p>Ongoing work on drought (SPEI/SPI), arid & semi-arid Iran, and 2035 forecasting under Dr. Sanaz Moghim’s group.</p>
-        <a class="btn" href="/research.html">Explore research →</a>
+        <p>Ongoing work on drought (SPEI/SPI), arid &amp; semi-arid Iran, and 2035 forecasting under Dr. Sanaz Moghim’s group.</p>
+        <a class="btn" href="research.html">Explore research →</a>
       </div>
       <div class="panel">
         <h3>Publications</h3>
-        <p>PFAS advanced oxidation review (2023) in Int. J. Environ. Analytical Chemistry (Vol. 104, 2024, Issue 20).</p>
-        <a class="btn" href="/publications.html">Browse publications →</a>
+        <p>PFAS advanced oxidation review (2024) in <em>International Journal of Environmental Analytical Chemistry</em>.</p>
+        <a class="btn" href="publications.html">Browse publications →</a>
       </div>
       <div class="panel">
         <h3>CV</h3>
-        <p>Education, experience, and skills!</p>
-        <a class="btn" href="/cv.html">View CV →</a>
+        <p>Education, experience, and skills.</p>
+        <a class="btn" href="cv.html">View CV →</a>
       </div>
     </section>
 
-    <footer>© 2025 Sepehr Kazemi · Built with GitHub Pages</footer>
+    <footer>© <span id="year"></span> Sepehr Kazemi · Built with GitHub Pages</footer>
   </div>
 
-  <!-- Right-side animated sea strip -->
+  <!-- Right-side animated sea strip (decorative) -->
   <div class="right-strip" aria-hidden="true">
     <div class="wave"></div>
     <div class="wave w2"></div>
     <div class="boat"><div class="hull"></div><div class="mast"></div><div class="sail"></div></div>
   </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
