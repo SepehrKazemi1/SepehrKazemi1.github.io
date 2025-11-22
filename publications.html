@@ -1,59 +1,123 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Publications — PFAS Removal with AOPs</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{ --panel: rgba(0,0,0,.5); --ring:#2a3b7c; --fg:#eef1ff; --muted:#c3c9ff; }
-  *{box-sizing:border-box}
-  body{margin:0;color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
-  body::before{content:"";position:fixed;inset:0;background:#0b1020 url('/assets/bg-pubs.jpg') center/cover no-repeat;z-index:-2}
-  body::after{content:"";position:fixed;inset:0;background:linear-gradient(180deg,#060914cc,#0a1126cc);z-index:-1}
-  .wrap{max-width:1050px;margin:auto;padding:28px}
-  .nav{display:flex;gap:10px;justify-content:flex-end;margin-bottom:10px}
-  .nav a{padding:8px 12px;border:1px solid #ffffff33;border-radius:12px;background:var(--panel);color:#fff;text-decoration:none}
-  .nav a:hover{background:rgba(0,0,0,.6)}
-  h1{margin:.2rem 0 1rem;font-size:42px}
-  .card{background:var(--panel);border:1px solid #ffffff22;border-radius:18px;padding:18px;margin:16px 0;backdrop-filter:saturate(120%) blur(2px)}
-  figure{margin:0}
-  figure img{width:100%;border-radius:14px;border:1px solid #ffffff22}
-  figcaption{color:var(--muted);font-size:14px;margin-top:6px}
-  blockquote{margin:0;padding:14px;border-left:3px solid var(--ring);background:rgba(255,255,255,.04);border-radius:8px}
-  .meta{color:var(--muted);margin-top:6px}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications — PFAS Removal with AOPs</title>
+  <meta name="description" content="Plain-English summary of our review on PFAS removal using advanced oxidation processes (AOPs), with key takeaways and when each method is practical." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --panel: rgba(0,0,0,.5); --ring:#2a3b7c; --fg:#eef1ff; --muted:#c3c9ff; --border:#ffffff22; }
+    *{ box-sizing:border-box }
+    body{ margin:0; color:var(--fg); font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif }
+    body::before{ content:""; position:fixed; inset:0; background:#0b1020; z-index:-2 }
+    body::after{ content:""; position:fixed; inset:0; background:linear-gradient(180deg,#060914cc,#0a1126cc); z-index:-1 }
+    .wrap{ max-width:1050px; margin:auto; padding:28px }
+    header nav{ display:flex; gap:10px; justify-content:flex-end; margin-bottom:10px; flex-wrap:wrap }
+    header nav a{ padding:8px 12px; border:1px solid #ffffff33; border-radius:12px; background:var(--panel); color:#fff; text-decoration:none }
+    header nav a:hover{ background:rgba(0,0,0,.6) }
+    h1{ margin:.2rem 0 1rem; font-size:42px }
+    .meta{ color:var(--muted); margin:.25rem 0 1rem }
+    .card{ background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:18px; margin:16px 0; backdrop-filter:saturate(120%) blur(2px) }
+    figure{ margin:0 }
+    figure img{ width:100%; border-radius:14px; border:1px solid var(--border) }
+    figcaption{ color:var(--muted); font-size:14px; margin-top:6px }
+    .takeaway{ border-left:3px solid var(--ring); background:rgba(255,255,255,.04); border-radius:8px; padding:14px; margin:0 }
+    ul.inline{ padding-left:1.1rem; margin:.5rem 0 0 }
+    ul.inline li{ margin:.25rem 0 }
+    table{ width:100%; border-collapse:separate; border-spacing:0; margin-top:.5rem; font-size:.95rem }
+    th,td{ padding:10px 12px; border-bottom:1px solid var(--border); vertical-align:top }
+    th{ text-align:left; color:#e7e9ff }
+    small.muted{ color:var(--muted) }
+    footer{ margin-top:28px; text-align:center; color:var(--muted); font-size:.95rem }
+    a.link { color:#b0c0ff; }
+  </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="nav">
-      <a href="/index.html">Home</a>
-      <a href="/research.html">Research</a>
-      <a href="/cv.html">CV</a>
-    </div>
+    <header>
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="cv.html">CV</a>
+        <a href="https://scholar.google.com/citations?user=0egzFZMAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      </nav>
+    </header>
 
-    <h1>PFAS Removal with Advanced Oxidation Processes</h1>
-    <p class="meta">
-      International Journal of Environmental Analytical Chemistry, <em>Volume 104 (2024), Issue 20</em> ·
-      <a style="color:#b0c0ff" href="https://doi.org/10.1080/03067319.2023.2225412" target="_blank" rel="noopener">DOI: 10.1080/03067319.2023.2225412</a>
-    </p>
-    <p class="meta"><strong>Contribution:</strong> structured literature review and analysis.</p>
+    <main id="main" tabindex="-1">
+      <h1>PFAS Removal with Advanced Oxidation Processes</h1>
+      <p class="meta">
+        <strong>Journal:</strong> International Journal of Environmental Analytical Chemistry, <em>Volume 104 (2024), Issue 20</em> ·
+        <a class="link" href="https://doi.org/10.1080/03067319.2023.2225412" target="_blank" rel="noopener">DOI: 10.1080/03067319.2023.2225412</a><br>
+        <strong>My contribution:</strong> Structured literature review, comparative synthesis, and figures.
+      </p>
 
-    <div class="card">
-      <figure>
-        <img src="ChatGPT Image Oct 22, 2025, 07_53_27 PM.png" alt="Conceptual PFAS treatment via AOPs" onerror="this.style.display='none'">
-        <figcaption>PFAS treatment pathways and AOPs (illustrative).</figcaption>
-      </figure>
-    </div>
+      <section class="card" aria-labelledby="fig-aops">
+        <figure>
+          <img src="ChatGPT Image Oct 22, 2025, 07_53_27 PM.png"
+               alt="Illustration of PFAS treatment pathways and advanced oxidation processes (AOPs)" loading="lazy"
+               onerror="this.closest('figure').style.display='none'">
+          <figcaption id="fig-aops">Conceptual PFAS treatment pathways and AOPs (illustrative).</figcaption>
+        </figure>
+      </section>
 
-    <div class="card">
-      <h2 style="margin-top:0">Abstract</h2>
-      <blockquote>
-        <p>Our review compares advanced oxidation processes for removing PFAS from water.
-  We find boron-doped diamond (BDD) electro-oxidation consistently delivers strong removal for long-chain PFAS,
-  and foam-fractionation combined with BDD performs especially well on complex leachates.
-  Photochemical routes are generally limited for stubborn species like PFOS under typical conditions.
-  We outline the underlying mechanisms, typical efficiencies, and when each method is practical given energy and cost.</p>
-    </div>
+      <section class="card" aria-labelledby="plain">
+        <h2 id="plain" style="margin-top:0">Plain-English takeaway</h2>
+        <p class="takeaway">
+          Our review compares advanced oxidation processes for removing PFAS from water. We find
+          boron-doped diamond (BDD) electro-oxidation consistently delivers strong removal for long-chain PFAS, and
+          foam-fractionation combined with BDD performs especially well on complex leachates. Photochemical routes are
+          generally limited for stubborn species like PFOS under typical conditions. We summarise mechanisms, typical
+          efficiencies, and when each method is practical given energy and cost.
+        </p>
+      </section>
+
+      <section class="card" aria-labelledby="key-results">
+        <h2 id="key-results" style="margin-top:0">Key results at a glance</h2>
+        <ul class="inline">
+          <li><strong>BDD electro-oxidation:</strong> high degradation for long-chain PFAS; robust but energy-intensive.</li>
+          <li><strong>Foam fractionation → BDD:</strong> pre-concentrates PFAS, improving downstream destruction on leachates.</li>
+          <li><strong>Photochemical AOPs:</strong> limited for PFOS/short-chain species without aggressive conditions or catalysts.</li>
+          <li><strong>Practicality:</strong> trade-offs between removal efficiency, matrix effects, and operating cost/energy.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="when-to-use">
+        <h2 id="when-to-use" style="margin-top:0">When to use what</h2>
+        <table role="table" aria-label="Method selection guide">
+          <thead>
+            <tr><th scope="col">Scenario</th><th scope="col">Often effective</th><th scope="col">Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Complex leachate / high organic load</td>
+              <td>Foam fractionation + BDD</td>
+              <td>Pre-concentration reduces energy per mass removed; monitor foam stability.</td>
+            </tr>
+            <tr>
+              <td>Long-chain PFAS in treated streams</td>
+              <td>BDD electro-oxidation</td>
+              <td>High mineralisation potential; plan for power density and electrode lifespan.</td>
+            </tr>
+            <tr>
+              <td>Short-chain PFAS or PFOS-dominant</td>
+              <td>Enhanced electrochemical routes</td>
+              <td>Photochemical routes alone often underperform; consider catalysts or alternatives.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><small class="muted">This table is a practitioner-oriented heuristic, not a substitute for site-specific piloting.</small></p>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Sepehr Kazemi · <a class="link" href="mailto:sepehrkazemi20@gmail.com">Email</a>
+    </footer>
   </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
